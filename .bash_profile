@@ -46,3 +46,56 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+alias git=hub
+alias skellyio='ssh ubuntu@skelly.io -i ~/.ssh/skellyio.pem'
+# export PATH=$PATH:~/.rbenv/shims
+export PATH=$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin
+# export WORKON_HOME=$HOME/.virtualenvs
+# export PROJECT_HOME=$HOME/Devel
+# export VIRTUALENVWRAPPER_PYTHON=`which python`
+# export VIRTUALENVWRAPPER_VIRTUALENV=`which virtualenv`
+# source `which virtualenvwrapper.sh`  #FIX THIS AT SOME POINT
+export ANDROID_HOME=/usr/local/opt/android-sdk
+
+export PATH="~/.scala:$PATH";
+
+export PATH="~/dotfiles:$PATH";
+
+alias subeach='git submodule foreach'
+alias dm='docker-machine start vm; eval $(docker-machine env vm); echo "Docker Ready"'
+# dm &
+alias dc='docker-compose'§
+
+export LIFX_TOKEN=ccfd03224a0ad63ed6f8c487c1eff9bedeba04ebb8405dac527ecc1d5d7c6183
+
+alias lights="python /Coding/python/lifx/lights.py"
+alias mood="lights mood"
+alias up="lights up"
+alias down="lights down"
+
+alias eextra="nano ~/.extra"
+alias extra="source ~/.extra"
+
+export GOPATH=/Users/michaelskelly/Cloud/Coding/go
+
+# Set my termnal colours
+alias black='echo -e "\033]50;SetProfile=black\a"'
+alias yellow='echo -e "\033]50;SetProfile=yellow\a"'
+alias red='echo -e "\033]50;SetProfile=red\a"'
+alias green='echo -e "\033]50;SetProfile=green\a"'
+alias blue='echo -e "\033]50;SetProfile=blue\a"'
+alias purple='echo -e "\033]50;SetProfile=purple\a"'
+
+
+# Full Fact commands
+alias ff='cd /Coding/fullfact/docker-stack'
+alias max='ssh max.fullfact.org'
+alias dl='dc logs --tail=10 -f'
+
+# Network Locum
+alias nl='cd /Coding/networklocum/stack'
+
+
+# Give homebrew commands precedence
+export PATH=/usr/local/bin:$PATH
