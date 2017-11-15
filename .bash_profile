@@ -65,7 +65,7 @@ export PATH="~/dotfiles:$PATH";
 alias subeach='git submodule foreach'
 alias dm='docker-machine start vm; eval $(docker-machine env vm); echo "Docker Ready"'
 # dm &
-alias dc='docker-compose'§
+alias dc='docker-compose'
 
 export LIFX_TOKEN=ccfd03224a0ad63ed6f8c487c1eff9bedeba04ebb8405dac527ecc1d5d7c6183
 
@@ -98,4 +98,16 @@ alias nl='cd /Coding/networklocum/stack'
 
 
 # Give homebrew commands precedence
-export PATH=/usr/local/bin:$PATH
+alias ruby='/usr/local/bin/ruby'
+
+# OK I messed up my SSH, fix it here
+export PATH="/usr/bin/:$PATH";
+
+alias worktools="ssh -i ~/.ssh/worktools.pem ubuntu@server.worktools.io"
+
+
+# Add GHC 7.10.3 to the PATH, via https://ghcformacosx.github.io/
+export GHC_DOT_APP="/Applications/ghc-7.10.3.app"
+if [ -d "$GHC_DOT_APP" ]; then
+  export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+fi
