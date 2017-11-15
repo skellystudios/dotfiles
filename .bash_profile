@@ -96,6 +96,7 @@ alias dl='dc logs --tail=10 -f'
 # Network Locum
 alias nl='cd /Coding/networklocum/stack'
 
+git config --global commit.gpgsign false
 
 # Give homebrew commands precedence
 alias ruby='/usr/local/bin/ruby'
@@ -113,4 +114,4 @@ export GHC_DOT_APP="/Applications/ghc-7.10.3.app"
 if [ -d "$GHC_DOT_APP" ]; then
   export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
-v
+
