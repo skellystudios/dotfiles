@@ -115,3 +115,6 @@ if [ -d "$GHC_DOT_APP" ]; then
   export PATH="${HOME}/.local/bin:${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
 fi
 
+# Apparently for homebrew python
+export PATH=/usr/local/share/python:$PATH
+
