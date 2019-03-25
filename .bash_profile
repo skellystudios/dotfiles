@@ -124,3 +124,7 @@ if [ -f '/Users/michaelskelly/Downloads/google-cloud-sdk/path.bash.inc' ]; then 
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/michaelskelly/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/michaelskelly/Downloads/google-cloud-sdk/completion.bash.inc'; fi
+
+# Install all the stuff in the Stacker dotfiles
+source '~/projects/worktools/bashrc/stacker.sh'
+source '~/projects/worktools/bashrc/kubernetes.sh'
