@@ -126,5 +126,19 @@ if [ -f '/Users/michaelskelly/Downloads/google-cloud-sdk/path.bash.inc' ]; then 
 if [ -f '/Users/michaelskelly/Downloads/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/michaelskelly/Downloads/google-cloud-sdk/completion.bash.inc'; fi
 
 # Install all the stuff in the Stacker dotfiles
-source '~/projects/worktools/bashrc/stacker.sh'
-source '~/projects/worktools/bashrc/kubernetes.sh'
+source '/Users/michaelskelly/projects/worktools/bashrc/stacker.sh'
+source '/Users/michaelskelly/projects/worktools/bashrc/kubernetes.sh'
+
+# Use VS code to edit git
+export GIT_EDITOR='code -w'
+
+# Add code completion for git
+[[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+
+alias tostaging="export BRANCH=`git branch | grep \* | cut -d ' ' -f2`; git checkout staging; git pull; git merge $BRANCH; git push; git checkout -"
+
+# Don't autoedit merge commits
+export GIT_MERGE_AUTOEDIT=no
