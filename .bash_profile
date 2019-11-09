@@ -142,3 +142,6 @@ alias tostaging="export BRANCH=`git branch | grep \* | cut -d ' ' -f2`; git chec
 
 # Don't autoedit merge commits
 export GIT_MERGE_AUTOEDIT=no
+
+git config --global user.name "Michael Skelly"
+git config --global user.email skellystudios@gmail.com
